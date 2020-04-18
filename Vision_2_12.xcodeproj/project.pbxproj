@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7241A9F2448912A0025ADC8 /* FaceDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7241A9E2448912A0025ADC8 /* FaceDetectorViewController.swift */; };
 		F7CED5682448874000B47189 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CED5672448874000B47189 /* AppDelegate.swift */; };
 		F7CED56A2448874000B47189 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CED5692448874000B47189 /* SceneDelegate.swift */; };
 		F7CED56C2448874000B47189 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CED56B2448874000B47189 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7241A9E2448912A0025ADC8 /* FaceDetectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectorViewController.swift; sourceTree = "<group>"; };
 		F7CED5642448874000B47189 /* Vision_2_12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vision_2_12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CED5672448874000B47189 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7CED5692448874000B47189 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				F7CED5672448874000B47189 /* AppDelegate.swift */,
 				F7CED5692448874000B47189 /* SceneDelegate.swift */,
 				F7CED56B2448874000B47189 /* ViewController.swift */,
+				F7241A9E2448912A0025ADC8 /* FaceDetectorViewController.swift */,
 				F7CED56D2448874000B47189 /* Main.storyboard */,
 				F7CED5702448874200B47189 /* Assets.xcassets */,
 				F7CED5722448874200B47189 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				F7CED56C2448874000B47189 /* ViewController.swift in Sources */,
 				F7CED5682448874000B47189 /* AppDelegate.swift in Sources */,
+				F7241A9F2448912A0025ADC8 /* FaceDetectorViewController.swift in Sources */,
 				F7CED56A2448874000B47189 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9H4ZLWV74V;
 				INFOPLIST_FILE = Vision_2_12/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9H4ZLWV74V;
 				INFOPLIST_FILE = Vision_2_12/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
