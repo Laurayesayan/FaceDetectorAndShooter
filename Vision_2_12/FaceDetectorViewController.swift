@@ -167,7 +167,9 @@ class FaceDetectorViewController: ViewController {
     fileprivate func animateShot(to faceBox: CGRect) {
         let bullet = UIImageView(image: UIImage(imageLiteralResourceName: "bullet"))
         bullet.frame = CGRect(origin: CGPoint.zero, size: bullet.image!.size)
+        bullet.layer.anchorPoint = CGPoint(x: 0, y: 0)
         bullet.center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height - bullet.image!.size.height)
+//        bullet.transform = CGAffineTransform(scaleX: 1, y: -1)
         
         view.addSubview(bullet)
         
@@ -176,6 +178,8 @@ class FaceDetectorViewController: ViewController {
         
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { [weak self] in
             bullet.center = CGPoint(x: faceBox.origin.y - faceBox.size.height / 2, y: faceBox.origin.x + faceBox.size.width / 2)
+//            bullet.center = CGPoint(x: self!.view.frame.midX, y: self!.view.frame.midY)
+//            bullet.center = CGPoint(x: faceBox.midY, y: faceBox.midX)
             self!.animationCompleted = false
         }) { [weak self] (F) in
             bullet.isHidden = true
