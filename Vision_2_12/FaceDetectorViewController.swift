@@ -140,8 +140,11 @@ class FaceDetectorViewController: ViewController {
         
         let distance = view.frame.size.width / min(faceBox.size.width, faceBox.size.height)
         let duration = Double(distance) * 0.3
+        let angle = getAngle(between: bullet.center, and: CGPoint(x: convertedFaceBox.midX, y: convertedFaceBox.midY))
 
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { [weak self] in
+            bullet.transform = CGAffineTransform(rotationAngle: angle)
+            
             bullet.layer.position = CGPoint(x: convertedFaceBox.midX, y: convertedFaceBox.midY)
             self!.animationCompleted = false
         }) { [weak self] (bool) in
@@ -150,7 +153,14 @@ class FaceDetectorViewController: ViewController {
         }
     }
     
-    func convertCoords(rect: CGRect) {
+    func getAngle(between first: CGPoint, and second: CGPoint) -> CGFloat {
+        let center = CGPoint(x: abs(second.x - first.x), y: abs(second.y - first.y))
+        var angle = atan2(center.x, center.y)
         
+        if first.x > second.x {
+            angle = -angle
+        }
+        
+        return angle
     }
 }
